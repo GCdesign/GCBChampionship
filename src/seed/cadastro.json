@@ -1,0 +1,28 @@
+//Cadastro para a collection: participantes
+[{
+	
+	"Inscricao" : NumberInt("3"),
+	"Nome" : "Tropeço",
+	"Ritmo" : "1",
+	"Classe" : "A",
+	"Media" : 0.0,
+	"Notas" : [
+		{
+			"Nota" : 0.0
+		}
+	]
+},
+{
+	
+	"Inscricao" : NumberInt("3"),
+	"Nome" : "Tropeço",
+	"Ritmo" : "2",
+	"Classe" : "A",
+	"Media" : 0.0,
+	"Notas" : [
+		{
+			"Nota" : 0.0
+		}
+	]
+}
+]

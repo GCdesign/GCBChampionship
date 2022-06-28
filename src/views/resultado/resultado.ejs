@@ -1,0 +1,77 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Resultado das avaliações</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+        <div class="carousel slide " data-ride="carousel"  >
+                <div class="carousel-inner ">
+                        <div class="carousel-item active">
+                          <img class="d-block w-25 h-25" src="/Banner.jpeg" alt="First slide">
+                        </div>
+                        <!--<div class="carousel-item">
+                          <img class="d-block w-25 h-25" src="/Banner.jpeg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-25 h-25" src="/Banner.jpeg" alt="Third slide">
+                        </div>-->
+                      </div>
+        </div>
+    <div>
+            <table class="table table-bordered table-hover">
+                    <thead class="thead-dark ">
+                      <tr>
+                        <th class="text-center" scope="col">Inscrição</th>
+                        <th class="text-center" scope="col">Nome</th>
+                        <th class="text-center" scope="col">Classe</th>
+                        <th class="text-center" scope="col">Média Banguela</th>
+                        <th class="text-center" scope="col">Média São Bento Grande</th>
+                        <th class="text-center" scope="col">Média Geral</th>
+                        <th class="text-center" scope="col">Posição</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                <% rank.Classe_A.forEach(function(participante){ %>
+                    <tr>
+                        <td class="text-center" scope="row"><%= participante.Inscricao%></td>
+                        <td class="text-center"><%= participante.Nome%></td>
+                        <td class="text-center"><%= participante.Classe %></td>
+                        <td class="text-center"><%= participante.mediaBanguela %></td>
+                        <td class="text-center"><%= participante.mediaSaoBento %></td>
+                        <td class="text-center"><%= participante.Media %></td>
+                        <th class="text-center"><%=(rank.Classe_A.indexOf(participante)+1)%></th>
+                      </tr>
+                  <% })%>
+                  <% rank.Classe_B.forEach(function(participante){ %>
+                    <tr>
+                        <td scope="row" class="text-center"><%= participante.Inscricao%></td>
+                        <td class="text-center"><%= participante.Nome%></td>
+                        <td class="text-center"><%= participante.Classe %></td>
+                        <td class="text-center"><%= participante.mediaBanguela %></td>
+                        <td class="text-center"><%= participante.mediaSaoBento %></td>
+                        <td class="text-center"><%= participante.Media %></td>
+                        <th class="text-center"><%=(rank.Classe_B.indexOf(participante)+1)%></th>
+                      </tr>
+                  <% })%>            
+    </div>
+
+</body>
+<footer>
+    <div class=" float-right " style="margin-right:100px;" >
+        <form action="/campeonato/avaliacao" method="GET">
+            <input type="submit" value="Avaliar Participantes" class="btn d-inline p-2  btn-secondary">
+            <br/>
+            <br/>
+        </form>
+        </div>
+        <div class=" float-left " style="margin-left:100px;">
+                <form action="/home" method="GET">
+                <input type="submit" value="Voltar para o início" class="btn d-inline p-2 btn-secondary">
+                <br/>
+                </form>
+        </div>
+</footer>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="carousel slide " data-ride="carousel"  >
+            <div class="carousel-inner ">
+                    <div class="carousel-item active">
+                      <img class="d-block w-25 h-25" src="/Banner.jpeg" alt="First slide">
+                    </div>
+                    <!-- <div class="carousel-item">
+                      <img class="d-block w-25 h-25" src="/Banner.jpeg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block w-25 h-25" src="/Banner.jpeg" alt="Third slide">
+                    </div> -->
+                  </div>
+    </div>
+    <br/>
+    
+    <form action="/avaliacao/salvar" method="POST" style="margin-left:5px;">
+        <div class="form-group">
+        <label style="margin-left:1px;">Classe</label>
+        <input type="text" class="form-control" id="classe"  name="classe" placeholder="A ou B">
+        
+        <label style="margin-left:1px;">Participante</label>
+        <input type="text" class="form-control" id="participante" name="participante" placeholder="Apelido do capoeirista">
+        
+        <label style="margin-left:1px;">Ritmo</label>
+        <input type="text" class="form-control" id="ritmo" name="ritmo" placeholder="1-Banguela 2-Regional">
+        
+        <label style="margin-left:1px;">Número de Inscrição</label>
+        <input type="text" class="form-control" id="inscricao" name="inscricao" placeholder="Número de inscrição">
+        
+
+        <label style="margin-left:1px;">Nota</label>
+        <input type="text" class="form-control" id="nota" name="nota" placeholder="Nota">
+        <br/>
+ 
+        <input type="submit" value="Enviar Nota" class="btn btn-secondary d-inline float-right" style="margin-right:100px;">
+    </form>
+    <div class=" float-left " style="margin-left:100px;">
+            <form action="/home" method="GET">
+            <input type="submit" value="Voltar para o início" class="btn d-inline p-2 btn-secondary">
+            <br/>
+            </form>
+    </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
